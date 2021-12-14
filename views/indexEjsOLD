@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hello EJS template engine</h1>
+    <p><b>ชื่อ :</b><%= data %></p>
+    <p><b>อายุ :</b><%= age %> ปี</p>
+    <p><%- address %></p>
+    <hr>
+
+    <% if(age>=18) {%>
+        <h1>ผ่านเกณฑ์การใช้งาน</h1>
+    <% }else {%>
+        <h1>ไม่ผ่านเกณฑ์การใช้งาน</h1>
+    <% } %>
+    <hr>
+    <% for(i=1;i<=10;i++) {%>
+        <p>ลำดับที่ <%= i%></p>
+    <%}%>
+    <hr>
+    <%=products%>
+    <hr>
+    <p><%=products[0]%></p>
+    <p><%=products[1]%></p>
+    <p><%=products[2]%></p>
+    <p><%=products[3]%></p>
+    <p><%=products[4]%></p>
+    <p><%=products[5]%></p>
+    <hr>
+    <ol>
+        <% for(index in products) {%>
+            <li><%=products[index]%></li>
+        <% } %>
+    </ol>
+    <hr>
+    <p><%=products2 %></p>
+    
+</html>
